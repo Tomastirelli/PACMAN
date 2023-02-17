@@ -129,6 +129,12 @@
             nuv.src = "iniziato.png";
         }
         
+        document.addEventListener('keydown', (event) => {
+            if(event.keyCode==17){alert("non e' possibile modificare lo zoom in questa pagin")
+                return false;
+            }
+        }, false)
+            
 
         //sposta in alto il titolo
         $("#imm").click(function(){
@@ -170,6 +176,7 @@
                 clearTimeout(t);
         }
         
+
     
 
         //quello che succede a gioco finito
