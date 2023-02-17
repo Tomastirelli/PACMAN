@@ -1,0 +1,184 @@
+<html>
+    <head>
+        <title>PACMAN</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <link href="https://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
+        <link rel="icon" href="icona.PNG">
+        <style>
+            @import url('https://fonts.cdnfonts.com/css/common-pixel');
+            @font-face {
+                font-family: "pacman";
+                src: url("scrittapixel.TTF");
+            }
+            body{
+               background-color: black;
+               overflow: hidden;
+            }
+            #imm{
+                text-align:center;
+                margin-top: 350;
+                position: relative;
+            }
+            #personaggio{
+                float: right;
+                margin-top: 200;
+                position: relative;
+            }
+            #nuvola{
+                float: right;
+                margin-top: 130;
+            }
+            #vite{
+                color: white;
+                top: 0;
+				position: absolute;
+				margin-top: 10px;
+                font-family: "pacman";
+                display: none;
+                margin-left: 20px;
+            }
+            #cuori{
+                top: 0;
+				position: absolute;
+				margin-top: 25px;
+                display: none;
+                margin-left: 240px;
+            }
+			#tempi{
+                font-family: "pacman";
+                color: white;
+                display: none;
+                position: absolute;
+                top:630;
+                left: 500;
+            }
+            #cont_cronometro{
+                color: white;
+                top: 625;
+                left: 620;
+				position: absolute;
+				
+                font-family: "pacman";
+                display: none;
+                font-size: 25px;
+            }
+            #mappa{
+                display: none;
+                position: absolute;
+                top:180;
+                left: 475;
+            }
+            #punti{
+                color: white;
+                margin-left: 1600px;
+				position: absolute;
+				margin-top: 6px;
+				top: 0;
+                font-family: "pacman";
+                display: none;
+                font-size: 25px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="imm">
+            <img src="titolo.com.png" id="titolo" width="500" height="162">       
+        </div>
+        <div id="personaggio">
+            <img src="personaggio.png" width="224" height="234" >       
+        </div>
+        <div id="nuvola">
+            <img src="nuvola.png" id="nuv" width="200" height="115" >   
+        </div>
+        <div id="vite">
+            <h2 id="vita">VITE RIMANENTI: </h2>
+        </div>
+        <div id="tempi">
+            <h2 id="tempo">TEMPO: </h2>
+        </div>
+        <div id="cuori">
+            <img src="fotocuore.png" id="cuore1" width="40" height="40"> 
+            <img src="fotocuore.png" id="cuore2" width="40" height="40"> 
+            <img src="fotocuore.png" id="cuore3" width="40" height="40"> 
+        </div>
+        <div id="cont_cronometro">
+            <p><time id="cronometro">00:00</time></p>
+        </div>
+        <div id="mappa">
+            <img src="mappa_pacman.png" id="map" > 
+            <img src="">
+        </div>
+        <div id="punti">
+            <p id="punt">PUNTI: </p> 
+        </div>
+   
+        
+
+    </body>
+
+    <script>
+        vita =  document.getElementById("vita");
+        var titolo= document.getElementById("titolo");
+        nuvola = document.getElementById("nuv");
+        cronometro = document.getElementById("cronometro");
+
+        
+        function cambiaImm(){
+            nuv.src = "iniziato.png";
+        }
+        
+
+        //sposta in alto il titolo
+        $("#imm").click(function(){
+            $("#imm").animate({top: "-350px"}); 
+            //$("#nuvola").hide(1000);
+            //$("#iniziato.png").show(1000);
+            //$("#nuvola").replaceWith(src="iniziato.png");
+            cambiaImm();
+            $("#vite").fadeIn(3000);
+            $("#cuori").fadeIn(3000);
+            $("#tempi").fadeIn(3000);
+            $("#cont_cronometro").fadeIn(3000);
+            $("#mappa").fadeIn(3000);
+            $("#punti").fadeIn(3000);
+        });
+
+        var sec = 0;
+        var min = 0;
+
+        function tick(){
+            sec++;
+            if (sec >= 60) {
+                sec = 0;
+                min++;
+            }
+        }
+        function add() {
+            tick();
+            cronometro.textContent=+ (min > 9 ? min : "0" + min)+ ":" + (sec > 9 ? sec : "0" + sec);
+            timer();
+        }
+        function timer() {
+            t = setTimeout(add, 1950);
+        }
+
+        timer();
+            titolo.onclick = timer;
+            stop.onclick = function() {
+                clearTimeout(t);
+        }
+        
+    
+
+        //quello che succede a gioco finito
+        /*function giocoFinito(){
+            cronometro.textContent = "00:00";
+            seconds = 0; minutes = 0;
+            nuv.src = "giocoFinito.png";
+        }*/
+
+    </script>
+
+</html>
