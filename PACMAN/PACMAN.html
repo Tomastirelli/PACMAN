@@ -1,4 +1,4 @@
-<html>
+\<html>
     <head>
         <title>PACMAN</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -180,9 +180,9 @@
         var sec = 0;
         var min = 0;
 
-        var Pacman;
+        var mappa;
 
-        /*Pacman[
+        /*mappa[
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
             [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
@@ -229,8 +229,40 @@
                 clearTimeout(t);
         }
         
-
+        //pacman personaggio
+        var pacman=new Array();
+        pacman[1]='451px 405px';
+        pacman[2]='451px 318px';
+        pacman[3]='451px 184px';
+        
+        var fantasmaAzzuro=new Array();
+        fantasmaAzzuro[1]='260px 82px' //su
+        fantasmaAzzuro[2]='260px 126px' //dx
+        fantasmaAzzuro[3]='260px 348px' //sx
+        fantasmaAzzuro[4]='260px 526px' //giu
+        fantasmaAzzuro[5]='481px 596px' //morto
     
+
+        var fantasmaRosso=new Array();//width, height
+        fantasmaRosso[1]='703px 525px' //dx
+        fantasmaRosso[2]='525px 747px' //sx
+        fantasmaRosso[3]='570px 614px' //su
+        fantasmaRosso[4]='437px 350px' //giu
+        fantasmaRosso[5]='348px 38px' //morto
+
+        var fantasmaArancione=new Array();
+        fantasmaArancione[1]='260px 82px'
+        fantasmaArancione[2]='260px 126px'
+        fantasmaArancione[3]='260px 348px'
+        fantasmaArancione[4]='260px 526px'
+        fantasmaArancione[5]='481px 596px'
+
+        var fantasmaRosa=new Array();
+        fantasmaRosa[1]='260px 82px'
+        fantasmaRosa[2]='260px 126px'
+        fantasmaRosa[3]='260px 348px'
+        fantasmaRosa[4]='260px 526px'
+        fantasmaRosa[5]='481px 596px'
 
         //quello che succede a gioco finito
         /*function giocoFinito(){
