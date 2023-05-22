@@ -1,4 +1,4 @@
-\<html>
+<html>
     <head>
         <title>PACMAN</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -36,17 +36,32 @@
             }
             #imm{
                 text-align:center;
-                margin-top: 350;
+                margin-top: 15%;
                 position: relative;
+            }
+            #titolo{
+                width: 40%;
             }
             #personaggio{
                 float: right;
-                margin-top: 200;
+                margin-top: 7%;
+                position: relative;
+            }
+            #pers{
+                width: 12%;
+                float: right;
                 position: relative;
             }
             #nuvola{
                 float: right;
-                margin-top: 130;
+                margin-top: 1%;
+            }
+            #nuv{
+                position: relative;
+                float: right;
+                margin-right: 25%;
+                margin-top: -47%;
+                width: 35%;
             }
             #vite{
                 color: white;
@@ -62,20 +77,20 @@
 				position: absolute;
 				margin-top: 25px;
                 display: none;
-                margin-left: 240px;
+                margin-left: 260px;
             }
 			#tempi{
                 font-family: "pacman";
                 color: white;
                 display: none;
                 position: absolute;
-                top:630;
-                left: 535;
+                top:77%;
+                left: 26%;
             }
             #cont_cronometro{
                 color: white;
-                top: 625;
-                left: 655;
+                top: 76%;
+                left: 36%;
 				position: absolute;
 				
                 font-family: "pacman";
@@ -85,12 +100,18 @@
             #mappa{
                 display: none;
                 position: absolute;
-                top:180;
-                left: 525;
+                top: 0%;
+                left: 0%;
+                margin: auto;
+                margin-top: 11%;
+                width: 100%;
+            }
+            #map{
+                width: 50%;
             }
             #punti{
                 color: white;
-                margin-left: 1600px;
+                margin-left: 70%;
 				position: absolute;
 				margin-top: 6px;
 				top: 0;
@@ -102,72 +123,203 @@
                 text-align:center;
                 
             }
+            #pacman{
+                position: absolute;
+                width: 3%;
+                left: 49%;
+                top: 45%;
+                z-index: 6;
+            }
+            
+            #fantasma{
+                position: ABSOLUTE;
+                width: 2.5%;
+                left: 71%;
+                top: 81%;
+                z-index: 2;
+            }
+            #ciliege{
+                position: absolute;
+                width: 2.5%;
+                left: 49%;
+                top: 81%;
+                z-index: 1;
+            }
+            #ciliegie2{
+                position: absolute;
+                width: 2.5%;
+                left: 71%;
+                top: 9%;
+                z-index: 1;
+            }
+            #ciliegie3{
+                position: absolute;
+                width: 2.5%;
+                left: 27%;
+                top: 9%;
+                z-index: 1;
+            }
+            #ciliegie4{
+                position: absolute;
+                width: 2.5%;
+                left: 27%;
+                top: 81%;
+                z-index: 1;
+            }
+            #ciliegie5{
+                position: absolute;
+                width: 2.5%;
+                left: 49%;
+                top: 9%;
+                z-index: 1;
+            }
+            #ciliegie6{
+                position: absolute;
+                width: 2.5%;
+                left: 71%;
+                top: 81%;
+                z-index: 1;
+            }
+            #ciliegie7{
+                position: absolute;
+                width: 2.5%;
+                left: 37%;
+                top: 45%;
+                z-index: 1;
+            }
+            #ciliegie8{
+                position: absolute;
+                width: 2.5%;
+                left: 61%;
+                top: 45%;
+                z-index: 1;
+            }
+            #punteggi{
+                color: white;
+                margin-left: 90%;
+				position: absolute;
+				margin-top: 6px;
+				top: 0;
+                font-family: "pacman";
+                display: none;
+                font-size: 25px;
+            }
+            #sconfitta{
+                position: absolute;
+                display: none;
+                z-index: 20;
+                margin-left: -25%;
+                width: 149%;
+                margin-top: 8%;
+            }
+            #vittoria{
+                position: absolute;
+                display: none;
+                z-index: 20;
+                margin-left: -25%;
+                width: 149%;
+                margin-top: 5%;
+            }
+            #puntfatt{
+                color: white;
+                margin-left: 89%;
+				position: absolute;
+				margin-top: 6px;
+				top: 0;
+                font-family: "pacman";
+                display: none;
+                font-size: 25px;
+            }
+            .blur   {
+                filter: blur(5px);
+                -webkit-filter: blur(5px);
+                -moz-filter: blur(5px);
+                -o-filter: blur(5px);
+                -ms-filter: blur(5px);
+            }
+            #tempo{
+                color: white;
+            }
         </style>
     </head>
 
     <body>
         <div id = "contenitore">
             <div id="imm">
-                <img src="titolo.com.png" id="titolo" width="500" height="162">       
+                <img src="titolo.com.png" id="titolo">       
             </div>
             <div id="personaggio">
-                <img src="personaggio.png" width="224" height="234" >       
+                <img src="personaggio.png" id="pers">       
             </div>
             <div id="nuvola">
-                <img src="nuvola.png" id="nuv" width="200" height="115" >   
+                <img src="nuvola.png" id="nuv" >   
             </div>
             <div id="vite">
-                <h2 id="vita">VITE RIMANENTI: </h2>
+                <h2 id="vita">VITA RIMANENTE: </h2>
             </div>
             <div id="tempi">
                 <h2 id="tempo">TEMPO: </h2>
             </div>
             <div id="cuori">
                 <img src="fotocuore.png" id="cuore1" width="40" height="40"> 
-                <img src="fotocuore.png" id="cuore2" width="40" height="40"> 
-                <img src="fotocuore.png" id="cuore3" width="40" height="40"> 
             </div>
             <div id="cont_cronometro">
                 <p><time id="cronometro">00:00</time></p>
             </div>
             <div id="mappa">
-                <img src="mappa2.jpg" id="map" width="842" height="451"> 
-                <img src="">
+                <img src="mappa2.jpg" id="map" > 
+                <img src="pacman.png" id="pacman">
+                <img src="fantasmaRosso.png" id="fantasma">
+                <img src="ciliege.jpg" id="ciliege">
+                <img src="ciliege.jpg" id="ciliegie2">
+                <img src="ciliege.jpg" id="ciliegie3">
+                <img src="ciliege.jpg" id="ciliegie4">
+                <img src="ciliege.jpg" id="ciliegie5">
+                <img src="ciliege.jpg" id="ciliegie6">
+                <img src="ciliege.jpg" id="ciliegie7">
+                <img src="ciliege.jpg" id="ciliegie8">
             </div>
             <div id="punti">
-                <p id="punt">PUNTI: </p> 
+                <p id="punt">CILIEGIE PRESE: </p> 
+            </div>
+            <div id="punteggi">
+                <p id="punteggio"> /8 </p>
+            </div>
+            <div id="puntfatt">
+                <p id="puntFatto">0</p>
+            </div>
+            <div id="sconfitta">
+                <img src="sconfitta.jpg" id="lose">
+            </div>
+            <div id="vittoria">
+                <img src="vittoria.jpg" id="win">
             </div>
         </div>
-        
-   
-        
 
     </body>
 
     <script>
-        vita =  document.getElementById("vita");
-        var titolo= document.getElementById("titolo");
-        nuvola = document.getElementById("nuv");
-        cronometro = document.getElementById("cronometro");
-
+        var audio= new Audio("musicaPac.mp3")
         
         function cambiaImm(){
             nuv.src = "iniziato.png";
         }
-        
-        document.addEventListener('keydown', (event) => {
-            if(event.keyCode==17){alert("Non e' possibile modificare lo zoom in questa pagina !!!!!!!!!!!!")
-                return false;
-            }
-        }, false)
-            
 
-        //sposta in alto il titolo
+            
+        vita =  document.getElementById("vita");
+        var titolo= document.getElementById("titolo");
+        nuvola = document.getElementById("nuv");
+        cronometro = document.getElementById("cronometro");
+        
+        //fa il fadein di tutte le immagini necessare cambiando anche la dimensione e la locazione di alcune dopo che viene schiacciato al centro
         $("#imm").click(function(){
-            $("#imm").animate({top: "-350px"}); 
-            //$("#nuvola").hide(1000);
-            //$("#iniziato.png").show(1000);
-            //$("#nuvola").replaceWith(src="iniziato.png");
+            $("#titolo").animate({marginTop: "-15%"}); 
+            $("#titolo").animate({width: "30%"}); 
+            $("#nuvola").animate({marginTop: "5%"}); 
+            $("#nuv").animate({marginRight: "20%"}); 
+            $("#personaggio").animate({marginTop: "20%"}); 
+            $("#nuv").animate({width: "25%"}); 
+            $("#pers").animate({width: "10%"}); 
             cambiaImm();
             $("#vite").fadeIn(3000);
             $("#cuori").fadeIn(3000);
@@ -175,102 +327,561 @@
             $("#cont_cronometro").fadeIn(3000);
             $("#mappa").fadeIn(3000);
             $("#punti").fadeIn(3000);
+            $("#pacman").fadeIn(3000);
+            $("#punteggi").fadeIn(3000);
+            //$("#fantasmaAzzurro").fadeIn(3000);
+            //$("#fantasmaArancione").fadeIn(3000);
+            $("#fantasmaRosso").fadeIn(3000);
+            $("#puntfatt").fadeIn(3000);
+            //$("#puntini").fadeIn(3000);
         });
 
+        
+        
+        titolo.onclick = timer;
+        //tempo 
         var sec = 0;
         var min = 0;
-
-        var mappa;
-
-        /*mappa[
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-            [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-            [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-            [0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0],
-            [0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0],
-            [0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0],
-            [0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0],
-            [0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0],
-            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-            [0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0],
-            [0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0],
-            [0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0],
-            [0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0],
-            [0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0],
-            [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-            [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-            [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-            
-        ];*/
-
+        var tempoFinale;
         function tick(){
             sec++;
             if (sec >= 60) {
                 sec = 0;
                 min++;
             }
+            add();
         }
         function add() {
-            tick();
-            cronometro.textContent=+ (min > 9 ? min : "0" + min)+ ":" + (sec > 9 ? sec : "0" + sec);
-            timer();
+            cronometro.textContent=+ (min > 9 ? min : "0" + min)+ ":" + (sec > 9 ? sec : "0" + sec); 
         }
-        function timer() {
-            t = setTimeout(add, 1950);
-        }
-
-        timer();
-            titolo.onclick = timer;
-            stop.onclick = function() {
-                clearTimeout(t);
+        //spawn fantasmi 
+        function timer(){
+            tempoFinale= setInterval(tick, 1000)
+            //var ftA = new Fanstasma(1, 1, 0.1, 9, 'fantasmaAzzurro')
+            //var ftAr= new Fanstasma(24, 1, 0.1, 9, "fantasmaArancione")
+            //var ftRosa= new Fanstasma(1, 10, 0.1, 9, "fantasmaRosa")
+            //var ftRo=  new Fanstasma(24, 10, 0.1, 9, "fantasmaRosso")
+            audio.play()
+            SpawnaFantasma()    
         }
         
-        //pacman personaggio
-        var pacman=new Array();
-        pacman[1]='451px 405px';
-        pacman[2]='451px 318px';
-        pacman[3]='451px 184px';
+        mappa=[
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0],
+            [0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0],
+            [0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0],
+            [0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0],
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0],
+            [0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0],
+            [0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0],
+            [0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        ];
+
+        mappa2=[
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0],
+            [0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0],
+            [0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0],
+            [0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0],
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0],
+            [0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0],
+            [0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0],
+            [0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        ];
+
+      //variabili per spostamento pacman
+        posX=12;
+        posY=5;
+        spostX=2;
+        spostY=9;
         
-        var fantasmaAzzuro=new Array();
-        fantasmaAzzuro[1]='260px 82px' //su
-        fantasmaAzzuro[2]='260px 126px' //dx
-        fantasmaAzzuro[3]='260px 348px' //sx
-        fantasmaAzzuro[4]='260px 526px' //giu
-        fantasmaAzzuro[5]='481px 596px' //morto
-    
+        pacman = document.getElementById("pacman");
+        pacman.style.left=window.getComputedStyle(pacman).left;
+        pacman.style.top=window.getComputedStyle(pacman).top;
+        
+        //movimento pacman
+        document.addEventListener('keydown', (event) => {
+            
+            if(event.keyCode==37){
+                
+                if(mappa[posY][posX-1]==1){
+                    posX--;
+                    pacman.style.left= (parseFloat(pacman.style.left) - spostX) + "%";
+                    //console.log("sinistra");
+                    collisionePacFantasma()
+                    collisioniCiliegie()
+                }
+            }
+            else if(event.keyCode==38){
+                if(mappa[posY-1][posX]==1){
+                    posY--;
+                    pacman.style.top= (parseFloat(pacman.style.top) - spostY) + "%";
+                    //console.log("su")
+                    collisionePacFantasma()
+                    collisioniCiliegie()
+                }
+            }
+            else if(event.keyCode==39){
+                //console.log(mappa[posY][posX]);
+                if(mappa[posY][posX+1]==1){
+                    posX++;
+                    pacman.style.left= (parseFloat(pacman.style.left) + spostX) + "%";
+                    //console.log("destra");
+                    collisionePacFantasma()
+                    collisioniCiliegie()
+                }
+            }
+            else if(event.keyCode==40){
+                //console.log(mappa[posY][posX]);
+                if(mappa[posY+1][posX]==1){
+                    posY++;
+                    pacman.style.top= (parseFloat(pacman.style.top) + spostY) + "%";
+                    //console.log("giu");
+                    collisionePacFantasma()
+                    collisioniCiliegie()
+                }
+            }
 
-        var fantasmaRosso=new Array();//width, height
-        fantasmaRosso[1]='703px 525px' //dx
-        fantasmaRosso[2]='525px 747px' //sx
-        fantasmaRosso[3]='570px 614px' //su
-        fantasmaRosso[4]='437px 350px' //giu
-        fantasmaRosso[5]='348px 38px' //morto
+            
 
-        var fantasmaArancione=new Array();
-        fantasmaArancione[1]='260px 82px'
-        fantasmaArancione[2]='260px 126px'
-        fantasmaArancione[3]='260px 348px'
-        fantasmaArancione[4]='260px 526px'
-        fantasmaArancione[5]='481px 596px'
+        }, false)
 
-        var fantasmaRosa=new Array();
-        fantasmaRosa[1]='260px 82px'
-        fantasmaRosa[2]='260px 126px'
-        fantasmaRosa[3]='260px 348px'
-        fantasmaRosa[4]='260px 526px'
-        fantasmaRosa[5]='481px 596px'
+        
+        //variabili spostamento fantasma
+        function SpawnaFantasma(){
+            posXFantasma=23;
+            posYFantasma=9;
+            spostXFa=2;
+            spostYFa=9;
+            
+            fantasma= document.getElementById("fantasma")
+            fantasma.style.left=window.getComputedStyle(fantasma).left;
+            fantasma.style.top=window.getComputedStyle(fantasma).top;
+        }
+
+        function resettaPos(){
+            posXFantasma=23;
+            posYFantasma=9;
+            spostXFa=2;
+            spostYFa=9;
+            
+            fantasma= document.getElementById("fantasma")
+            fantasma.style.left="71%";
+            fantasma.style.top="81%";
+            $("#fantasmaRosso").fadeIn(0);
+            
+        }
+
+
+        //movimento fantasma
+        document.addEventListener('keydown', (event) => {
+            //console.log(mappa[posYFantasma][posXFantasma-1])
+            if(event.keyCode==65){
+                
+                if(mappa2[posYFantasma][posXFantasma-1]==1){
+                    posXFantasma--;
+                    fantasma.style.left= (parseFloat(fantasma.style.left) - spostXFa) + "%";
+                    console.log("sinistra");
+                    collisionePacFantasma()
+                }
+                //console.log(mappa[posYFantasma][posXFantasma]);
+            }
+            else if(event.keyCode==87){
+                //console.log(mappa2[posYFantasma][posXFantasma]);
+                if(mappa2[posYFantasma-1][posXFantasma]==1){
+                    posYFantasma--;
+                    fantasma.style.top= (parseFloat(fantasma.style.top) - spostYFa) + "%";
+                    //console.log("su");
+                    collisionePacFantasma()
+                    
+                }
+            }
+            else if(event.keyCode==68){
+                //console.log(mappa2[posYFantasma][posXFantasma]);
+                if(mappa2[posYFantasma][posXFantasma+1]==1){
+                    posXFantasma++;
+                    fantasma.style.left= (parseFloat(fantasma.style.left) + spostXFa) + "%";
+                    //console.log("destra");
+                    collisionePacFantasma();
+                    
+                }
+            }
+            else if(event.keyCode==83){
+                if(mappa2[posYFantasma+1][posXFantasma]==1){
+                    posYFantasma++;
+                    fantasma.style.top= (parseFloat(fantasma.style.top) + spostYFa) + "%";
+                    collisionePacFantasma()
+                    //console.log("giu");
+                }
+            }
+        }, false)
+        
+
+        function collisionePacFantasma() {
+                //console.log(fantasma.style.left);
+                //console.log(pacman.style.left);
+                //console.log(fantasma.style.top);
+                //console.log(pacman.style.top)
+                if(fantasma.style.left == pacman.style.left  && fantasma.style.top == pacman.style.top) {
+                        $("#cuore1").hide()
+                        sconfitta();
+                }
+        }
+        //passiamo i valori delle ciliegie
+        ciliegie1= document.getElementById("ciliege")
+        ciliegie1.style.left=window.getComputedStyle(ciliegie1).left;
+        ciliegie1.style.top=window.getComputedStyle(ciliegie1).top;
+
+        ciliegie2= document.getElementById("ciliegie2")
+        ciliegie2.style.left=window.getComputedStyle(ciliegie2).left;
+        ciliegie2.style.top=window.getComputedStyle(ciliegie2).top;
+
+        ciliegie3= document.getElementById("ciliegie3")
+        ciliegie3.style.left=window.getComputedStyle(ciliegie3).left;
+        ciliegie3.style.top=window.getComputedStyle(ciliegie3).top;
+
+        ciliegie4= document.getElementById("ciliegie4")
+        ciliegie4.style.left=window.getComputedStyle(ciliegie4).left;
+        ciliegie4.style.top=window.getComputedStyle(ciliegie4).top;
+
+        ciliegie5= document.getElementById("ciliegie5")
+        ciliegie5.style.left=window.getComputedStyle(ciliegie5).left;
+        ciliegie5.style.top=window.getComputedStyle(ciliegie5).top;
+
+        ciliegie6= document.getElementById("ciliegie6")
+        ciliegie6.style.left=window.getComputedStyle(ciliegie6).left;
+        ciliegie6.style.top=window.getComputedStyle(ciliegie6).top;
+
+        ciliegie7= document.getElementById("ciliegie7")
+        ciliegie7.style.left=window.getComputedStyle(ciliegie7).left;
+        ciliegie7.style.top=window.getComputedStyle(ciliegie7).top;
+
+        ciliegie8= document.getElementById("ciliegie8")
+        ciliegie8.style.left=window.getComputedStyle(ciliegie8).left;
+        ciliegie8.style.top=window.getComputedStyle(ciliegie8).top;
+
+        var cont=0;
+        var cont1=0;
+        var cont2=0;
+        var cont3=0;
+        var cont4=0;
+        var cont5=0;
+        var cont6=0;
+        var cont7=0;
+        var contaCiliegie=0;
+        var punteggio = window.document.getElementById("puntFatto")
+        function collisioniCiliegie(){
+                if(ciliegie1.style.left == pacman.style.left  && ciliegie1.style.top == pacman.style.top){
+                    $("#ciliege").hide()  
+                    
+                    if(cont==0){
+                        contaCiliegie++;
+                        punteggio.innerHTML = contaCiliegie
+                        cont++;
+                    }
+                }
+                if(ciliegie2.style.left == pacman.style.left  && ciliegie2.style.top == pacman.style.top){
+                    $("#ciliegie2").hide()  
+                    
+                    if(cont1==0){
+                        cont1++;
+                        contaCiliegie++;
+                        punteggio.innerHTML = contaCiliegie
+                    }
+                }
+                if(ciliegie3.style.left == pacman.style.left  && ciliegie3.style.top == pacman.style.top){
+                    $("#ciliegie3").hide()  
+                      
+                    if(cont2==0){
+                        cont2++; 
+                        contaCiliegie++;
+                        punteggio.innerHTML = contaCiliegie
+                    }
+                }
+                if(ciliegie4.style.left == pacman.style.left  && ciliegie4.style.top == pacman.style.top){
+                    $("#ciliegie4").hide()  
+                    
+                    if(cont3==0){
+                        cont3++;
+                        contaCiliegie++;
+                        punteggio.innerHTML = contaCiliegie
+                    }
+                }
+                if(ciliegie5.style.left == pacman.style.left  && ciliegie5.style.top == pacman.style.top){
+                    $("#ciliegie5").hide() 
+                    
+                    if(cont4==0){
+                        cont4++;
+                        contaCiliegie++;
+                        punteggio.innerHTML = contaCiliegie
+                    }
+                }
+                if(ciliegie6.style.left == pacman.style.left  && ciliegie6.style.top == pacman.style.top){
+                    $("#ciliegie6").hide()  
+                    
+                    if(cont5==0){
+                        cont5++;
+                        contaCiliegie++;
+                        punteggio.innerHTML = contaCiliegie
+                    }
+                }
+                if(ciliegie7.style.left == pacman.style.left  && ciliegie7.style.top == pacman.style.top){
+                    $("#ciliegie7").hide() 
+                    
+                    if(cont6==0){
+                        cont6++;
+                        contaCiliegie++;
+                        punteggio.innerHTML = contaCiliegie
+                    }
+                    
+                }
+                if(ciliegie8.style.left == pacman.style.left  && ciliegie8.style.top == pacman.style.top){
+                    $("#ciliegie8").hide()   
+                    if(cont7==0){
+                        contaCiliegie++;
+                        punteggio.innerHTML = contaCiliegie
+                        cont7++;
+                    }
+                }
+                if(cont>=1 && cont1>=1 && cont2>=1 && cont3>=1 && cont4>=1 && cont5>=1 && cont6>=1 && cont7>=1 ){
+                    vittoria();
+                }
+        }
+
+        function blurr(){
+            window.document.getElementById("mappa").setAttribute('class', 'blur');
+            window.document.getElementById("cont_cronometro").setAttribute('class', 'blur');
+            window.document.getElementById("puntfatt").setAttribute('class', 'blur');
+            window.document.getElementById("cont_cronometro").setAttribute('class', 'blur');
+            //window.document.getElementById("imm").setAttribute('class', 'blur');
+            window.document.getElementById("tempi").setAttribute('class', 'blur');
+            window.document.getElementById("tempo").setAttribute('class', 'blur');
+            window.document.getElementById("vite").setAttribute('class', 'blur');
+            window.document.getElementById("cont_cronometro").setAttribute('class', 'blur');
+            window.document.getElementById("cuori").setAttribute('class', 'blur');
+            window.document.getElementById("punti").setAttribute('class', 'blur');
+            window.document.getElementById("punteggi").setAttribute('class', 'blur');
+        }
 
         //quello che succede a gioco finito
-        /*function giocoFinito(){
-            cronometro.textContent = "00:00";
-            seconds = 0; minutes = 0;
+        function vittoria(){
+            $("#vittoria").fadeIn()
+            nuv.src= "vittoriaNuv.png"
+            clearInterval(tempoFinale)
+            blurr()
+        }
+
+        function sconfitta(){
+            $("#sconfitta").fadeIn()
             nuv.src = "giocoFinito.png";
+            clearInterval(tempoFinale)
+            blurr()
+        }
+        
+       /*<img src="fantasmaAzzuro.png" id="fantasmaAzzurro" style="position: ABSOLUTE; width: 2.5%; left: 27%; top: 7%;">
+                <img src="fantasmaArancione.png" id="fantasmaArancione" style="position: absolute; width: 2.5%; left: 70%; top:7%">
+                <img src="fantasmaRosa.png" id="fantasmaRosa" style="position: absolute; width: 2.5%; left: 27%; top:82%">
+                #fantasmaAzzurro{
+                position: ABSOLUTE;
+                width: 2.5%;
+                left: 27%;
+                top: 7%;
+                z-index: 2;         
+            }
+            #fantasmaArancione{
+                position: ABSOLUTE;
+                width: 2.5%;
+                left: 70%;
+                top: 7%;
+                z-index: 2;
+            }
+            #fantasmaRosa{
+                position: ABSOLUTE;
+                width: 2.5%;
+                left: 27%;
+                top: 82%;
+                z-index: 2;
+            }
+            #puntini{
+                position: absolute;
+                z-index: 1;
+            }
+            <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 28%; top: 9%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 31.5%; top: 9%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 35%; top: 9%;">
+                <img src="puntini.jpg" id="puntini" name="puntino"style="position: ABSOLUTE; width: 1.5%; left: 40.5%; top: 9%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 44%; top: 9%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 47.5%; top: 9%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 51%; top: 9%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 54.5%; top: 9%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 58%; top: 9%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 63.5%; top: 9%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 67%; top: 9%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 70.5%; top: 9%;">
+
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 28%; top: 18%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 35%; top: 18%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 40.5%; top: 18%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 58%; top: 18%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 63.5%; top: 18%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 70.5%; top: 18%;">
+
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 28%; top: 27%;">
+                <img src="puntini.jpg" id="puntini" name="puntino"style="position: ABSOLUTE; width: 1.5%; left: 32%; top: 27%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 35%; top: 27%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 37.75%; top: 27%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 40.5%; top: 27%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 44%; top: 27%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 47.5%; top: 27%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 51%; top: 27%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 54.5%; top: 27%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 58%; top: 27%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 60.75%; top: 27%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 63.5%; top: 27%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 66.5%; top: 27%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 70.5%; top: 27%;">
+                
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 28%; top: 36%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 32%; top: 36%;">
+                <img src="puntini.jpg" id="puntini" name="puntino"style="position: ABSOLUTE; width: 1.5%; left: 40.5%; top: 36%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 47.5%; top: 36%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 51%; top: 36%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 58%; top: 36%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 66.5%; top: 36%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 70.5%; top: 36%;">
+
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 28%; top: 47%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 32%; top: 47%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 35%; top: 47%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 37.75%; top: 47%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 40.5%; top: 47%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 58%; top: 47%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 60.75%; top: 47%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 63.5%; top: 47%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 66.5%; top: 47%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 70.5%; top: 47%;">
+
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 28%; top: 58%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 32%; top: 58%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 40.5%; top: 58%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 58%; top: 58%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 66.5%; top: 58%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 70.5%; top: 58%;">
+                
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 28%; top: 67%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 32%; top: 67%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 35%; top: 67%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 37.75%; top: 67%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 40.5%; top: 67%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 44%; top: 67%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 47.5%; top: 67%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 51%; top: 67%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 54.5%; top: 67%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 58%; top: 67%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 60.75%; top: 67%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 63.5%; top: 67%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 66.5%; top: 67%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 70.5%; top: 67%;">
+                
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 28%; top: 76%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 35%; top: 76%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 40.5%; top: 76%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 58%; top: 76%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 63.5%; top: 76%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 70.5%; top: 76%;">
+                
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 28%; top: 85%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 31.5%; top: 85%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 35%; top: 85%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 40.5%; top: 85%;">
+                <img src="puntini.jpg" id="puntini" name="puntino"  style="position: ABSOLUTE; width: 1.5%; left: 44%; top: 85%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 47.5%; top: 85%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 51%; top: 85%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 54.5%; top: 85%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 58%; top: 85%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 63.5%; top: 85%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 67%; top: 85%;">
+                <img src="puntini.jpg" id="puntini" name="puntino" style="position: ABSOLUTE; width: 1.5%; left: 70.5%; top: 85%;">
+       
+
+        /*var puntini= [
+            { left: "27%", top: "9%" },
+            { left: 600, top: 100 },
+            { left: 700, top: 100 },
+            { left: 800, top: 100 },
+            { left: 900, top: 100 },
+            { left: 1000, top: 100 },
+            { left: 1100, top: 100 },
+            { left: 1200, top: 100 },
+            { left: 500, top: 175 },
+            { left: 600, top: 175 },
+            { left: 700, top: 175 },
+            { left: 800, top: 175 },
+            { left: 900, top: 175 },
+            { left: 1000, top: 175 },
+            { left: 1100, top: 175 },
+            { left: 1200, top: 175 },
+            { left: 500, top: 250 },
+            { left: 600, top: 250 },
+            { left: 700, top: 250 },
+            { left: 800, top: 250 },
+            { left: 900, top: 250 },
+            { left: 1000, top: 250 },
+            { left: 1100, top: 250 },
+            { left: 1200, top: 250 },
+            { left: 500, top: 325 },
+            { left: 600, top: 325 },
+            { left: 700, top: 325 },
+            { left: 800, top: 325 },
+            { left: 900, top: 325 },
+            { left: 1000, top: 325 },
+            { left: 1100, top: 325 },
+            { left: 1200, top: 325 }
+        ];
+
+        function puntini() {
+            document.getElementById('puntini').innerHTML = ""
+            for(var i = 0 ; i < 140 ; i++ ) {
+                document.getElementById('puntini').innerHTML += `<div class='punto' style='left:${puntini[i].left}px; top:${puntini[i].top}px'></div>`;
+            }
         }*/
 
+        //classe fantasma
+        /*class Fanstasma {            
+            constructor(left, up, vx, vy, colore) {
+                this.left = left;
+                this.up = up;
+                this.vx = vx;
+                this.vy = vy;
+                this.entity = window.document.getElementById(String(colore)); //prende il colore del fantasma
+                //$("#imm").click(function(){    
+                    setInterval(this.sposta, 25, this.entity, this.vx, this.up, this.left, 11) //passa solo su x, aggiungere quella su y
+                //});
+                console.log(up);
+                console.log(left);
+            }
+
+            sposta(temp, dx, u, l, su){
+                //if(mappa[l+1][u]==1){
+                    temp.style.left = (parseFloat(temp.style.left) + dx) + "%";
+                    console.log(temp.style.left)
+                /*}
+                else if(mappa[l-1][u]==1){
+                    temp.style.left = (parseFloat(temp.style.left) - dx) + "%";
+                    console.log(temp.style.left);
+                }
+                else if(mappa[l][u+1]==1){
+                    temp.style.left = (parseFloat(temp.style.left) + su) + "%";
+                }
+                else if(mappa[l][u-1]==1){
+                    temp.style.left = (parseFloat(temp.style.left) - su) + "%";
+                }
+            }
+        }*/
     </script>
 
 </html>
